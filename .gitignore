@@ -52,9 +52,9 @@ Mkfile.old
 dkms.conf
 
 # Build
-/build/**
-/cmake-build-debug/**
-/cmake-build-release/**
+**/build/**
+**/cmake-build-debug/**
+**/cmake-build-release/**
 
 # Jetbrains
 **/.idea/workspace.xml
@@ -62,4 +62,4 @@ dkms.conf
 **/.idea/usage.statistics.xml
 
 # Run
-/run/**
+**/run/**
