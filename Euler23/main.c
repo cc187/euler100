@@ -52,11 +52,11 @@ static void find_soa(
         const unsigned int num_abundants,
         bool *soa_map) {
 
-    for (unsigned int i = 0; i < num_abundants - 1; ++i) {
+    for (unsigned int i = 0; i < num_abundants; ++i) {
 
         const unsigned int a1 = abundants[i];
 
-        for (unsigned int j = i + 1; j < num_abundants; ++j) {
+        for (unsigned int j = i; j < num_abundants; ++j) {
 
             const unsigned int a2 = abundants[j];
             const unsigned int soa = a1 + a2;
@@ -77,7 +77,7 @@ static unsigned int sum_non_soa(const bool *soa_map) {
 
     for (unsigned int i = 0; i <= 28123; ++i) {
 
-        if (soa_map[i] != 1) {
+        if (!soa_map[i]) {
             sum += i;
         }
     }
